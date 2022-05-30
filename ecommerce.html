@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <title>Frontend Mentor | E-commerce product page</title>
+    <link rel="stylesheet" href="ecommerce.css" />
+    <script defer src="ecommerce.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav-header">
+        
+        <ul class="nav--links">
+            <li class="nav--items">
+                 <h2>sneakers</h2>
+            </li>
+          <li class="nav--items">
+            <a class="nav--link" href="#Collections"> Collections</a>
+          </li>
+          <li class="nav--items">
+            <a class="nav--link" href="#Men"> Men</a>
+          </li>
+          <li class="nav--items">
+            <a class="nav--link" href="#Women"> Women</a>
+          </li>
+          <li class="nav--items">
+            <a class="nav--link" href="#About"> About</a>
+          </li>
+          <li class="nav--items">
+            <a class="nav--link" href="#Contact"> Contact</a>
+          </li>
+        </ul>
+       <div class="nav--logo">
+        <img src="images/icon-cart.svg" alt="icon--cart" class="nav--logo--content cart-images"/>
+
+        <img
+          src="images/image-avatar.png"
+          alt="image-avatar"
+          class="nav--logo--content avatar"
+        />
+       </div>
+      </nav>
+    </header>
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <img src="images/image-product-1.jpg" alt="image-product-1"  class="main-image onclick-image"/>
+            <ul class="section-list-images">
+              <li class="list-images list-image-hover">
+                <img
+                  src="images/image-product-1-thumbnail.jpg"
+                  alt="image-product-1-thumbnail" class="sub--image"
+                />
+              </li>
+              <li class="list-images list-image-hover">
+                <img
+                  src="images/image-product-2-thumbnail.jpg"
+                  alt="image-product-2-thumbnail" class="sub--image"
+                />
+              </li>
+              <li class="list-images list-image-hover">
+                <img
+                  src="images/image-product-3-thumbnail.jpg"
+                  alt="image-product-3-thumbnail" class="sub--image"
+                />
+              </li>
+              <li class="list-images list-image-hover">
+                <img src="images/image-product-4-thumbnail.jpg"
+                alt="image-product-4-thumbnail" class="sub--image"
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Sneaker Company</h3>
+
+            <h2 class="section--sneaker">Fall Limited Edition Sneakers</h2>
+            <p>
+              These low-profile sneakers are your perfect casual wear companion.
+              Featuring a durable rubber outer sole, they’ll withstand
+              everything the weather can offer.
+            </p>
+          <div class="promo--price"> $125.00 <span class="percentage">50%</span> </div>
+            <div class="actual--price">$250.00 </div>
+            <div class="container section--container">
+                <div class="row">
+                  <div class="col">
+                    <button type="button" class= "btn-increment"> 
+                        <img src="images/icon-minus.svg" alt="icon--minus" class="section--minus">
+                         <span class="text--content"> 6 </span> <img src="images/icon-plus.svg" alt="icon-plus" class="section--plus"></button>
+                    
+                  </div>
+                  <div class="col">
+                    <button type="button" class=" btn-cart">
+                         <img src="images/icon-cart.svg" alt="icon--cart" class="cart"> <span class="cart-text">Add to cart</span></button>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<div class="modal-cart hidden">
+    <div class="cart-active">Cart</div>
+    <div class="cart--content">
+        Your Cart empty
+    </div>
+</div>
+<div class="modal-cart-updated hidden">
+    <div class="cart-active">Cart</div>
+    <div class="cart--content cart-checkout">
+        <ul class="section-list-images">
+            <li class="list-images">
+              <img
+                src="images/image-product-1-thumbnail.jpg"
+                alt="image-product-1-thumbnail" class="sub--image cart-image"
+              />
+            </li>
+            <li class="list-images hidden-content">
+                Fall Limited Edition Sneakers
+                <span class="total--price"></span>
+            </li>
+            <li class="list-images">
+                <img src="images/icon-delete.svg" alt="icon-delete" class="delete-btn">
+            </li>
+        </ul>
+        <button type="button" class=" btn-cart btn-cart-hidden checkout">
+            <span class="cart-text">Checkout</span></button>
+
+    </div>
+</div>
+
+
+   <div class="modals hidden">
+       <img src="images/icon-close.svg" alt="icon-close" class="btn--close">
+    <img src="images/image-product-1.jpg" alt="image-product-1"  class="section--image main-image" />
+    <!-- <img src="images/image-product-2.jpg" alt="image-product-2"  class="section--image main-image hidden" />
+    <img src="images/image-product-3.jpg" alt="image-product-3"  class="section--image main-image hidden" />
+    <img src="images/image-product-4.jpg" alt="image-product-4"  class="section--image main-image hidden" /> -->
+    <div class="section-images">
+      <ul class="section-list-images">
+          <li class="list-images list-image-click">
+            <img
+              src="images/image-product-1-thumbnail.jpg"
+              alt="image-product-1-thumbnail" class="sub--image"
+            />
+          </li>
+          <li class="list-images list-image-click">
+            <img
+              src="images/image-product-2-thumbnail.jpg"
+              alt="image-product-2-thumbnail" class="sub--image"
+            />
+          </li>
+          <li class="list-images list-image-click">
+            <img
+              src="images/image-product-3-thumbnail.jpg"
+               alt="image-product-3-thumbnail" class="sub--image"
+            />
+          </li>
+          <li class="list-images list-image-click">
+            <img src="images/image-product-4-thumbnail.jpg"
+            alt="image-product-4-thumbnail" class="sub--image" />
+          </li>
+            </ul>
+
+    </div>
+    <img src="images/icon-previous.svg" alt="icon-previous" class="icon-previous">
+   <img src="images/icon-next.svg" alt="icon-next" class="icon-next">
+  
+   </div>
+
+   
+
+<div class="overlay hidden"></div>
+<div class=" movement hidden">0</div>
+
+  </body>
+</html>
+
+<button type="button"></button>
+
+
+
